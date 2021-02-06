@@ -1,0 +1,17 @@
+{
+  "name": "Crypto_Trader",
+  "version": "1.0.0",
+  "description": "Crypto and Stock Price Data Scraper",
+  "main": "cryptoScrape.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
