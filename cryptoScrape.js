@@ -18,7 +18,11 @@ async function getPrice(stock) {
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
         } 
-        // BTC/ETC/ETH/DOGE/XRP stock show this
+        // Luminar Tech LAZR stock
+        else if (stock == 'LAZR') {
+            console.log(`The current price of ${stock} is: $${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="47"]').first().text()})`);
+        }
+        // BTC/ETC/ETH/DOGE/XRP stock
         else if (stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
@@ -41,6 +45,7 @@ setInterval(() => {
     getPrice('GME');
     getPrice('AMC');
     getPrice('ONCY');
+    getPrice('LAZR');
 
     /* CryptoCurrencies */
     getPrice('BTC-USD');
