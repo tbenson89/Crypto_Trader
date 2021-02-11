@@ -22,6 +22,14 @@ async function getPrice(stock) {
         else if (stock == 'LAZR') {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="47"]').first().text()})`);
         }
+        // Sundial Growers Marijuana Stock SNDL
+        // GOLD Barrick Gold Corp GOLD
+        else if (stock == 'SNDL'
+                || stock == 'VFF'
+                || stock == 'GOLD') {
+            console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
+            console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
+        }
         // BTC/ETC/ETH/DOGE/XRP stock
         else if (stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
@@ -46,6 +54,9 @@ setInterval(() => {
     getPrice('AMC');
     getPrice('ONCY');
     getPrice('LAZR');
+    getPrice('SNDL');
+    getPrice('VFF');
+    getPrice('GOLD');
 
     /* CryptoCurrencies */
     getPrice('BTC-USD');
