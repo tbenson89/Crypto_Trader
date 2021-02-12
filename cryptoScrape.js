@@ -31,11 +31,11 @@ async function getPrice(stock) {
             console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
         }
         // BTC/ETC/ETH/DOGE/XRP stock
+        /* XRP has been REMOVED || stock == 'XRP-USD' */
         else if (stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
                 || stock == 'DOGE-USD' 
-                || stock == 'XRP-USD'
                 || stock == 'LTC-USD'
                 || stock == 'USDT-USD') 
         {
@@ -64,7 +64,7 @@ setInterval(() => {
     getPrice('ETC-USD');
     getPrice('ETH-USD');
     getPrice('DOGE-USD');
-    getPrice('XRP-USD');
+    //getPrice('XRP-USD');
     getPrice('LTC-USD');
     getPrice('USDT-USD');
 }, 20000);
