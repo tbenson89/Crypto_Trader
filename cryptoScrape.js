@@ -36,9 +36,10 @@ async function getPrice(stock) {
                 || stock == 'ETH-USD' 
                 || stock == 'DOGE-USD' 
                 || stock == 'XRP-USD'
-                || stock == 'LTC-USD') 
+                || stock == 'LTC-USD'
+                || stock == 'USDT-USD') 
         {
-            console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()}`);
+            console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
 
     } 
@@ -65,4 +66,5 @@ setInterval(() => {
     getPrice('DOGE-USD');
     getPrice('XRP-USD');
     getPrice('LTC-USD');
-}, 10000);
+    getPrice('USDT-USD');
+}, 20000);
