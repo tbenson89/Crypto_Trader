@@ -30,15 +30,15 @@ async function getPrice(stock) {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
             console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
         }
-        // BTC/ETC/ETH/DOGE/Celo stock
-        /* XRP has been REMOVED || stock == 'XRP-USD' */
+        // BTC/ETC/ETH/DOGE/Celo/XRP stock
         else if (stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
                 || stock == 'DOGE-USD' 
                 || stock == 'LTC-USD'
                 || stock == 'CELO-USD'
-                || stock == 'USDT-USD') 
+                || stock == 'USDT-USD'
+                || stock == 'XRP-USD') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
@@ -65,7 +65,7 @@ setInterval(() => {
     getPrice('ETC-USD');
     getPrice('ETH-USD');
     getPrice('DOGE-USD');
-    //getPrice('XRP-USD');
+    getPrice('XRP-USD');
     getPrice('LTC-USD');
     getPrice('CELO-USD');
     getPrice('USDT-USD');
