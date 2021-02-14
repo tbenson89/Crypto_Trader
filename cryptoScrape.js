@@ -10,11 +10,14 @@ async function getPrice(stock) {
         // deconstruct obj returned from req website axios - using cheerio
         let $ = cheerio.load(data);
 
-        // GME/AMC/OncolyticsBiotech stock 
-        if (stock == 'AMC' 
+        /* Stocks */
+        // GME/AMC/OncolyticsBiotech/Pfizer(PFE)/Merck & Co., Inc. (MRK) 
+        if (   stock == 'TSLA' 
+            || stock == 'AMC' 
             || stock == 'GME' 
             || stock == 'ONCY'
-            || stock == 'TSLA') 
+            || stock == 'PFE'
+            || stock == 'MRK') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
         } 
@@ -24,14 +27,14 @@ async function getPrice(stock) {
         }
         // Sundial Growers Marijuana Stock SNDL
         // GOLD Barrick Gold Corp GOLD
-        else if (stock == 'SNDL'
+        else if (  stock == 'SNDL'
                 || stock == 'VFF'
                 || stock == 'GOLD') {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
             console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
         }
         // BTC/ETC/ETH/DOGE/Celo/XRP stock
-        else if (stock == 'BTC-USD' 
+        else if (  stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
                 || stock == 'DOGE-USD' 
@@ -52,13 +55,17 @@ async function getPrice(stock) {
 setInterval(() => {
     /* Stock */
     getPrice('TSLA');
-    getPrice('GME');
-    getPrice('AMC');
     getPrice('ONCY');
     getPrice('LAZR');
     getPrice('SNDL');
     getPrice('VFF');
     getPrice('GOLD');
+
+    /* DONT WANT just wathcing! */
+    getPrice('PFE');
+    getPrice('MRK');
+    getPrice('GME');
+    getPrice('AMC');
 
     /* CryptoCurrencies */
     getPrice('BTC-USD');
