@@ -23,7 +23,10 @@ async function getPrice(stock) {
         } 
         // Luminar Tech LAZR stock
         else if (stock == 'LAZR') {
-            console.log(`The current price of ${stock} is: $${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="47"]').first().text()})`);
+            console.log(`${stock} IS Temporarily OUT OF SERVICE: ${stock} !== $${$('span[data-reactid="46"]').first().text()}`);
+            console.log(`BROKEN: ${stock} ${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="46"]').next().text()}`);
+            /* Oddly below doesn't work anymore! ? ! */
+            // console.log(`The current price of ${stock} is: $${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="47"]').first().text()})`);
         }
         // Sundial Growers Marijuana Stock SNDL
         // GOLD Barrick Gold Corp GOLD
