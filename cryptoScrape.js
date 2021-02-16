@@ -23,16 +23,21 @@ async function getPrice(stock) {
         } 
         // Luminar Tech LAZR stock
         else if (stock == 'LAZR') {
-            console.log(`${stock} IS Temporarily OUT OF SERVICE: ${stock} !== $${$('span[data-reactid="46"]').first().text()}`);
-            console.log(`BROKEN: ${stock} ${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="46"]').next().text()}`);
-            /* Oddly below doesn't work anymore! ? ! */
-            // console.log(`The current price of ${stock} is: $${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="47"]').first().text()})`);
+            /* Oddly: works again */
+            console.log(`The current price of ${stock} is: $${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="47"]').first().text()})`);
+
+            /* Uncomment below if no work anymore! ? ! */
+            // console.log(`${stock} IS Temporarily OUT OF SERVICE: ${stock} !== $${$('span[data-reactid="46"]').first().text()}`);
+            // console.log(`BROKEN: ${stock} ${$('span[data-reactid="46"]').first().text()} | (${$('span[data-reactid="46"]').next().text()}`);
         }
         // Sundial Growers Marijuana Stock SNDL
+        // Village Farms VFF
         // GOLD Barrick Gold Corp GOLD
+        // Unity Biotechnology UBX
         else if (  stock == 'SNDL'
                 || stock == 'VFF'
-                || stock == 'GOLD') {
+                || stock == 'GOLD'
+                || stock == 'UBX') {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
             console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
         }
@@ -63,6 +68,7 @@ setInterval(() => {
     getPrice('SNDL');
     getPrice('VFF');
     getPrice('GOLD');
+    getPrice('UBX');
 
     /* DONT WANT just wathcing! */
     getPrice('PFE');
