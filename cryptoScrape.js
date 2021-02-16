@@ -12,12 +12,14 @@ async function getPrice(stock) {
 
         /* Stocks */
         // GME/AMC/OncolyticsBiotech/Pfizer(PFE)/Merck & Co., Inc. (MRK) 
+        // CyberOptics Corporation CYBE
         if (   stock == 'TSLA' 
             || stock == 'AMC' 
             || stock == 'GME' 
             || stock == 'ONCY'
             || stock == 'PFE'
-            || stock == 'MRK') 
+            || stock == 'MRK'
+            || stock == 'CYBE') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
         } 
@@ -34,10 +36,16 @@ async function getPrice(stock) {
         // Village Farms VFF
         // GOLD Barrick Gold Corp GOLD
         // Unity Biotechnology UBX
+        // NRG Energy Inc NRG
+        // BIO-Rad Labs BIO
+        // NortonLifeLock NLOK
         else if (  stock == 'SNDL'
                 || stock == 'VFF'
                 || stock == 'GOLD'
-                || stock == 'UBX') {
+                || stock == 'UBX'
+                || stock == 'NRG'
+                || stock == 'BIO'
+                || stock == 'NLOK') {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
             console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
         }
@@ -69,12 +77,16 @@ setInterval(() => {
     getPrice('VFF');
     getPrice('GOLD');
     getPrice('UBX');
+    getPrice('CYBE');
 
     /* DONT WANT just wathcing! */
     getPrice('PFE');
     getPrice('MRK');
-    getPrice('GME');
-    getPrice('AMC');
+    getPrice('NRG');
+    getPrice('BIO');
+    getPrice('NLOK');
+    //getPrice('GME');
+    //getPrice('AMC');
 
     /* CryptoCurrencies */
     getPrice('BTC-USD');
