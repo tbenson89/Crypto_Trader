@@ -50,6 +50,7 @@ async function getPrice(stock) {
             console.log(`The AfterHouse price of ${stock} is: $${$('span[data-reactid="55"]').first().text()} | (${$('span[data-reactid="58"]').first().text()})`);
         }
         // BTC/ETC/ETH/DOGE/Celo/XRP stock
+        // Cardano USD (ADA-USD)
         else if (  stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
@@ -57,7 +58,8 @@ async function getPrice(stock) {
                 || stock == 'LTC-USD'
                 || stock == 'CELO-USD'
                 || stock == 'USDT-USD'
-                || stock == 'XRP-USD') 
+                || stock == 'XRP-USD'
+                || stock == 'ADA-USD') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
@@ -90,11 +92,12 @@ setInterval(() => {
 
     /* CryptoCurrencies */
     getPrice('BTC-USD');
-    getPrice('ETC-USD');
     getPrice('ETH-USD');
-    getPrice('DOGE-USD');
-    getPrice('XRP-USD');
+    //getPrice('ETC-USD');
     getPrice('LTC-USD');
     getPrice('CELO-USD');
-    getPrice('USDT-USD');
+    getPrice('ADA-USD');
+    getPrice('XRP-USD');
+    //getPrice('DOGE-USD');
+    //getPrice('USDT-USD');
 }, 20000);
