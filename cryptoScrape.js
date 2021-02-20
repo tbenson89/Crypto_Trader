@@ -51,6 +51,7 @@ async function getPrice(stock) {
         }
         // BTC/ETC/ETH/DOGE/Celo/XRP stock
         // Cardano USD (ADA-USD)
+        // Stellar Lumens (XLM-USD)
         else if (  stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
@@ -59,7 +60,8 @@ async function getPrice(stock) {
                 || stock == 'CELO-USD'
                 || stock == 'USDT-USD'
                 || stock == 'XRP-USD'
-                || stock == 'ADA-USD') 
+                || stock == 'ADA-USD'
+                || stock == 'XLM-USD') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
@@ -97,6 +99,7 @@ setInterval(() => {
     getPrice('LTC-USD');
     getPrice('CELO-USD');
     getPrice('ADA-USD');
+    getPrice('XLM-USD');
     getPrice('XRP-USD');
     //getPrice('DOGE-USD');
     //getPrice('USDT-USD');
