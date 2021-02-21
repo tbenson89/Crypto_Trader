@@ -52,6 +52,7 @@ async function getPrice(stock) {
         // BTC/ETC/ETH/DOGE/Celo/XRP stock
         // Cardano USD (ADA-USD)
         // Stellar Lumens (XLM-USD)
+        // ETFMG Prime Cyber Security ETF (HACK)
         else if (  stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
@@ -61,7 +62,8 @@ async function getPrice(stock) {
                 || stock == 'USDT-USD'
                 || stock == 'XRP-USD'
                 || stock == 'ADA-USD'
-                || stock == 'XLM-USD') 
+                || stock == 'XLM-USD'
+                || stock == 'HACK') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
@@ -82,13 +84,14 @@ setInterval(() => {
     getPrice('GOLD');
     getPrice('UBX');
     getPrice('CYBE');
+    getPrice('HACK');
 
     /* DONT WANT just wathcing! */
-    getPrice('PFE');
-    getPrice('MRK');
     getPrice('NRG');
     getPrice('BIO');
     getPrice('NLOK');
+    //getPrice('PFE');
+    //getPrice('MRK');
     //getPrice('GME');
     //getPrice('AMC');
 
@@ -98,9 +101,9 @@ setInterval(() => {
     //getPrice('ETC-USD');
     getPrice('LTC-USD');
     getPrice('CELO-USD');
-    getPrice('ADA-USD');
     getPrice('XLM-USD');
-    getPrice('XRP-USD');
+    //getPrice('ADA-USD');
+    //getPrice('XRP-USD');
     //getPrice('DOGE-USD');
     //getPrice('USDT-USD');
 }, 20000);
