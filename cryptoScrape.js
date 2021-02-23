@@ -102,8 +102,8 @@ setInterval(() => {
     getPrice('LTC-USD');
     getPrice('CELO-USD');
     getPrice('XLM-USD');
+    getPrice('USDT-USD'); // Tether
     //getPrice('ADA-USD');
     //getPrice('XRP-USD');
     //getPrice('DOGE-USD');
-    //getPrice('USDT-USD');
 }, 20000);
