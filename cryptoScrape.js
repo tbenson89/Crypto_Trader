@@ -13,13 +13,15 @@ async function getPrice(stock) {
         /* Stocks */
         // GME/AMC/OncolyticsBiotech/Pfizer(PFE)/Merck & Co., Inc. (MRK) 
         // CyberOptics Corporation CYBE
+        // Urban Tea, Inc. (MYT)
         if (   stock == 'TSLA' 
             || stock == 'AMC' 
             || stock == 'GME' 
             || stock == 'ONCY'
             || stock == 'PFE'
             || stock == 'MRK'
-            || stock == 'CYBE') 
+            || stock == 'CYBE'
+            || stock == 'MYT') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="50"]').first().text()} | (${$('span[data-reactid="51"]').first().text()})`);
         } 
@@ -83,6 +85,7 @@ setInterval(() => {
     getPrice('VFF');
     getPrice('GOLD');
     getPrice('UBX');
+    getPrice('MYT');
     getPrice('CYBE');
     getPrice('HACK');
 
@@ -101,7 +104,7 @@ setInterval(() => {
     //getPrice('ETC-USD');
     getPrice('LTC-USD');
     getPrice('CELO-USD');
-    getPrice('XLM-USD');
+    //getPrice('XLM-USD');
     //getPrice('ADA-USD');
     //getPrice('XRP-USD');
     //getPrice('DOGE-USD');
