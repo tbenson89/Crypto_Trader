@@ -99,14 +99,14 @@ setInterval(() => {
     //getPrice('AMC');
 
     /* CryptoCurrencies */
-    getPrice('BTC-USD');
-    getPrice('ETH-USD');
-    //getPrice('ETC-USD');
-    getPrice('LTC-USD');
-    getPrice('CELO-USD');
-    //getPrice('XLM-USD');
+    getPrice('BTC-USD');    // Bitcoin Classic
+    getPrice('ETH-USD');    // 1.0
+    //getPrice('ETC-USD');  // Classic
+    getPrice('LTC-USD');    // LiteCoin
+    getPrice('CELO-USD');   // Cello GOLD 
+    //getPrice('XLM-USD');  // Stellar Lumens
+    getPrice('USDT-USD');   // Tether
     //getPrice('ADA-USD');
     //getPrice('XRP-USD');
     //getPrice('DOGE-USD');
-    //getPrice('USDT-USD');
 }, 20000);
