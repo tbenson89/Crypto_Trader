@@ -55,6 +55,7 @@ async function getPrice(stock) {
         // Cardano USD (ADA-USD)
         // Stellar Lumens (XLM-USD)
         // ETFMG Prime Cyber Security ETF (HACK)
+        // BITCOIN TRUST ETF - Purpose Bitcoin ETF (BTCC-B.TO)
         else if (  stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
@@ -65,7 +66,8 @@ async function getPrice(stock) {
                 || stock == 'XRP-USD'
                 || stock == 'ADA-USD'
                 || stock == 'XLM-USD'
-                || stock == 'HACK') 
+                || stock == 'HACK'
+                || stock == 'BTCC-B.TO') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
@@ -104,8 +106,9 @@ setInterval(() => {
     //getPrice('ETC-USD');  // Classic
     getPrice('LTC-USD');    // LiteCoin
     getPrice('CELO-USD');   // Cello GOLD 
+    getPrice('BTCC-B.TO');  // Purpose Bitcoin ETF (BTCC-B.TO) 
+    //getPrice('USDT-USD'); // Tether
     //getPrice('XLM-USD');  // Stellar Lumens
-    getPrice('USDT-USD');   // Tether
     //getPrice('ADA-USD');
     //getPrice('XRP-USD');
     //getPrice('DOGE-USD');
