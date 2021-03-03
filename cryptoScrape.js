@@ -56,6 +56,7 @@ async function getPrice(stock) {
         // Stellar Lumens (XLM-USD)
         // ETFMG Prime Cyber Security ETF (HACK)
         // BITCOIN TRUST ETF - Purpose Bitcoin ETF (BTCC-B.TO)
+        // Tezos USD COINBASE REWARDS 4.63% (XTZ-USD)
         else if (  stock == 'BTC-USD' 
                 || stock == 'ETC-USD' 
                 || stock == 'ETH-USD' 
@@ -67,7 +68,8 @@ async function getPrice(stock) {
                 || stock == 'ADA-USD'
                 || stock == 'XLM-USD'
                 || stock == 'HACK'
-                || stock == 'BTCC-B.TO') 
+                || stock == 'BTCC-B.TO'
+                || stock == 'XTZ-USD') 
         {
             console.log(`The current price of ${stock} is: $${$('span[data-reactid="33"]').eq(1).text()} | (${$('span[data-reactid="34"]').first().text()})`);
         }
@@ -106,7 +108,8 @@ setInterval(() => {
     //getPrice('ETC-USD');  // Classic
     getPrice('LTC-USD');    // LiteCoin
     getPrice('CELO-USD');   // Cello GOLD 
-    getPrice('BTCC-B.TO');  // Purpose Bitcoin ETF (BTCC-B.TO) 
+    getPrice('XTZ-USD');    // Tezos Staking 
+    //getPrice('BTCC-B.TO');  // Purpose Bitcoin ETF (BTCC-B.TO) 
     //getPrice('USDT-USD'); // Tether
     //getPrice('XLM-USD');  // Stellar Lumens
     //getPrice('ADA-USD');
