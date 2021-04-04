@@ -76,9 +76,9 @@ async function getPrice(stock) {
 }
 setInterval(() => {
     /* Stock */
-    getPrice('TSLA');
+    //getPrice('TSLA');
     getPrice('ONCY');
-    getPrice('LAZR');
+    //getPrice('LAZR');
     getPrice('SNDL');
     getPrice('VFF');
     getPrice('GOLD');
@@ -101,9 +101,9 @@ setInterval(() => {
     //getPrice('ETC-USD');
     getPrice('LTC-USD');
     getPrice('CELO-USD');
-    getPrice('XLM-USD');
-    getPrice('USDT-USD'); // Tether
-    //getPrice('ADA-USD');
+    //getPrice('XLM-USD');
+    //getPrice('USDT-USD'); // Tether
+    getPrice('ADA-USD');
     //getPrice('XRP-USD');
     //getPrice('DOGE-USD');
 }, 20000);
